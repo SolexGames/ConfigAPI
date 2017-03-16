@@ -16,6 +16,7 @@
 package xyz.mkotb.configapi.internal.adapt;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.MemorySection;
@@ -61,6 +62,7 @@ public final class AdapterHandler {
         ADAPTERS.put(ConfigurationSection.class, new ConfigurationSectionAdapter());
         ADAPTERS.put(EnchantmentAdapter.class, new EnchantmentAdapter());
         ADAPTERS.put(OfflinePlayer.class, new OfflinePlayerAdapter());
+        ADAPTERS.put(Location.class, new LocationAdapter());
 
         ADAPTERS.put(AtomicBoolean.class, new AtomicBooleanAdapter());
         ADAPTERS.put(AtomicInteger.class, new AtomicIntegerAdapter());
