@@ -22,7 +22,7 @@ public class LocationAdapter implements ObjectAdapter<Location, String> {
         float pitch = Float.parseFloat(split[4]);
         float yaw = Float.parseFloat(split[5]);
 
-        return new Location(world, x, y, z, pitch, yaw);
+        return new Location(world, x, y, z, yaw, pitch);
     }
 
     @Override
