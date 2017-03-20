@@ -40,7 +40,7 @@ public final class CommentHelper {
                 String[] value = valueFrom(annotation);
 
                 if (value != null) {
-                    comments.put(namingStrat.rename(field.getName()), value);
+                    comments.put(namingStrat.rename(field, field.getName()), value);
                     break;
                 }
             }

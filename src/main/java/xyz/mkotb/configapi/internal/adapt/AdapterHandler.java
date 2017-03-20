@@ -199,7 +199,7 @@ public final class AdapterHandler {
                         obj = translateAlternateColorCodes(annotation.value(), ChatColor.COLOR_CHAR, (String) obj);
                     }
 
-                    section.set(namingStrategy.rename(field.getName()), obj);
+                    section.set(namingStrategy.rename(field, field.getName()), obj);
                 }
             }
 
@@ -275,7 +275,7 @@ public final class AdapterHandler {
                     continue;
                 }
 
-                String name = namingStrategy.rename(field.getName());
+                String name = namingStrategy.rename(field, field.getName());
 
                 if (field.getDeclaredAnnotation(Self.class) != null) {
                     if (!ConfigurationSection.class.isAssignableFrom(field.getType())) {

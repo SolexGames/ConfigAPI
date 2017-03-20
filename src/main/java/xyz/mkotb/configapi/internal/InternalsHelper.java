@@ -79,7 +79,7 @@ public final class InternalsHelper {
         Field[] fields = obj.getClass().getFields();
 
         for (Field field : fields) {
-            fieldMap.put(strategy.rename(field.getName()), getField(field, obj));
+            fieldMap.put(strategy.rename(field, field.getName()), getField(field, obj));
         }
 
         return fieldMap;

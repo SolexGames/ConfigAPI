@@ -15,6 +15,7 @@
  */
 package xyz.mkotb.configapi.internal.naming;
 
+import java.lang.reflect.Field;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -24,7 +25,7 @@ public class CamelCaseNamingStrategy implements NamingStrategy {
             "|(?>(?=\\d))(?<!\\d)|(?<=\\d)(?=[^\\d\\r\\n]))");
 
     @Override
-    public String rename(String input) {
+    public String rename(Field field, String input) {
         return String.join("-", Stream.of(CAMEL_PATTERN.split(input))
                 .map(String::toLowerCase).collect(Collectors.toList()));
     }

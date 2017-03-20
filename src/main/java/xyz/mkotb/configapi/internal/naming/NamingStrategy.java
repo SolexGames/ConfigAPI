@@ -15,6 +15,8 @@
  */
 package xyz.mkotb.configapi.internal.naming;
 
+import java.lang.reflect.Field;
+
 public interface NamingStrategy {
-    String rename(String input);
+    String rename(Field field, String input);
 }

@@ -15,9 +15,11 @@
  */
 package xyz.mkotb.configapi.internal.naming;
 
+import java.lang.reflect.Field;
+
 public class DummyNamingStrategy implements NamingStrategy {
     @Override
-    public String rename(String input) {
+    public String rename(Field field, String input) {
         return input;
     }
 }
